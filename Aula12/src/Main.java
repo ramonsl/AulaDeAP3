@@ -7,9 +7,15 @@ public class Main {
         Livro book1 = new Livro();
         book1.lerDados();
         book1.mostrar();
-        double desc=book1.darDesconto(0.2);
+
+
+        if(!book1.darDesconto(0.5)){
+            System.out.println("Impossivel aplicar esse desconto");
+        }
+
+
         book1.mostrar();
-        System.out.println("Desconto dado "+ desc);
+
 
 
     }

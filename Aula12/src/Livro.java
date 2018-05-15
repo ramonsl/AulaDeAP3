@@ -2,12 +2,35 @@ import java.util.Scanner;
 
 public class Livro {
 
-    String nome;
-    String descricao;
-    String isbn;
-    Autor autor;
-    double valor;
-    int paginas;
+   private String nome;
+   private String descricao;
+   private String isbn;
+   private Autor autor;
+   private double valor;
+   private int paginas;
+
+
+
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getValor() {
+        return valor;
+    }
 
     public void lerDados(){
         Scanner tc = new Scanner(System.in);
@@ -33,10 +56,13 @@ public class Livro {
         System.out.println(this.paginas);
         this.autor.mostrar();
     }
-    public double darDesconto(double porcentagem){
+    public boolean darDesconto(double porcentagem){
+        if(porcentagem > 0.3 ){
+            return false;
+        }
         double desconto= this.valor*porcentagem;
         this.valor -= desconto;
-        return  desconto;
+        return  true;
 
     }
 
