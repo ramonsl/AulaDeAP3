@@ -30,7 +30,7 @@ public class Conta {
 
     public boolean transferir(Conta destino, float valor) {
         if(this.sacar(valor)) {
-            return    destino.depositar(valor);
+            return destino.depositar(valor);
         }else{
             return false;
         }

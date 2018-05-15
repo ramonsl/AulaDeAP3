@@ -18,9 +18,8 @@ public class Bomba {
         System.out.println("Bomba Ligada");
         for (int i=0;i<segundos;i++){
             System.out.println("Falta " +(i-segundos)+ " tempo pra desligar");
-
             try {
-                Thread.sleep(1000);
+                Thread.sleep(1000);//pausa
             }catch (Exception ie){
                 System.out.println("Deu problemas");
             }
